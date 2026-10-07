@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="pet_primary">#E87546</color>
+    <color name="pet_primary_dark">#C85B32</color>
+    <color name="pet_background">#FFF8F3</color>
+    <color name="pet_surface">#FFFFFF</color>
+    <color name="pet_text">#2D2926</color>
+    <color name="pet_text_secondary">#756A64</color>
+    <color name="pet_success">#4CAF50</color>
+</resources>

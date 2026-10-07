@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pc_orange">#F26A21</color>
+    <color name="pc_orange_dark">#D95412</color>
+    <color name="pc_orange_soft">#FFF0E4</color>
+
+    <color name="pc_cream">#FFF9F2</color>
+    <color name="pc_surface">#FFFFFF</color>
+
+    <color name="pc_text">#2B1710</color>
+    <color name="pc_text_secondary">#7C6F68</color>
+
+    <color name="pc_border">#F0D8C8</color>
+
+    <color name="pc_green">#45A85A</color>
+    <color name="pc_green_soft">#EAF7ED</color>
+
+    <color name="pc_red">#D94343</color>
+    <color name="pc_red_soft">#FDECEC</color>
+
+    <color name="pc_gold">#ECA51B</color>
+    <color name="pc_shadow">#18000000</color>
+
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_24"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/nav_checklist"
+        android:icon="@drawable/ic_tasks_24"
+        android:title="Checklist" />
+
+    <item
+        android:id="@+id/nav_routine"
+        android:icon="@drawable/ic_routine_24"
+        android:title="Routine" />
+
+    <item
+        android:id="@+id/nav_delegate"
+        android:icon="@drawable/ic_delegate_24"
+        android:title="Delegate" />
+
+    <item
+        android:id="@+id/nav_map"
+        android:icon="@drawable/ic_map_24"
+        android:title="Map" />
+
+</menu>

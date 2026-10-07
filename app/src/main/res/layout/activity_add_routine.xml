@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pet_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="32dp">
+
+        <!-- HEADER -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBack"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:minWidth="0dp"
+                android:text="←"
+                android:textColor="@color/pet_primary"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvScreenTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingEnd="48dp"
+                android:text="New Care Routine"
+                android:textColor="@color/pet_text"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="Create a feeding, walking, grooming or health routine for your pet."
+            android:textColor="@color/pet_text_secondary"
+            android:textSize="13sp" />
+
+
+        <!-- FORM CARD -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/pet_surface"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/pet_primary"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+
+                <!-- PET LABEL -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pet"
+                    android:textColor="@color/pet_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutPet"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:boxBackgroundColor="@color/pet_surface"
+                    app:boxStrokeColor="@color/pet_primary"
+                    app:boxStrokeWidth="1dp"
+                    app:boxStrokeWidthFocused="2dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/actPet"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:hint="Select pet"
+                        android:inputType="none"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:textColor="@color/pet_text"
+                        android:textColorHint="@color/pet_text_secondary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- ROUTINE NAME LABEL -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Routine Name"
+                    android:textColor="@color/pet_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutRoutineName"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:boxBackgroundColor="@color/pet_surface"
+                    app:boxStrokeColor="@color/pet_primary"
+                    app:boxStrokeWidth="1dp"
+                    app:boxStrokeWidthFocused="2dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRoutineName"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:hint="e.g. Max Daily Care"
+                        android:inputType="textCapSentences"
+                        android:maxLines="1"
+                        android:textColor="@color/pet_text"
+                        android:textColorHint="@color/pet_text_secondary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- TASK NAME LABEL -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Task Name"
+                    android:textColor="@color/pet_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutTaskName"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:boxBackgroundColor="@color/pet_surface"
+                    app:boxStrokeColor="@color/pet_primary"
+                    app:boxStrokeWidth="1dp"
+                    app:boxStrokeWidthFocused="2dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etTaskName"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:hint="e.g. Morning Feeding"
+                        android:inputType="textCapSentences"
+                        android:maxLines="1"
+                        android:textColor="@color/pet_text"
+                        android:textColorHint="@color/pet_text_secondary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- CATEGORY LABEL -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Category"
+                    android:textColor="@color/pet_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutCategory"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:boxBackgroundColor="@color/pet_surface"
+                    app:boxStrokeColor="@color/pet_primary"
+                    app:boxStrokeWidth="1dp"
+                    app:boxStrokeWidthFocused="2dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/actCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:hint="Select category"
+                        android:inputType="none"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:textColor="@color/pet_text"
+                        android:textColorHint="@color/pet_text_secondary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- TIME -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Time"
+                    android:textColor="@color/pet_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTime"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="6dp"
+                    android:text="SELECT TIME"
+                    android:textColor="@color/pet_primary"
+                    app:backgroundTint="@color/pet_surface"
+                    app:cornerRadius="14dp"
+                    app:strokeColor="@color/pet_primary"
+                    app:strokeWidth="1dp" />
+
+
+                <!-- FREQUENCY -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Frequency"
+                    android:textColor="@color/pet_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutFrequency"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:boxBackgroundColor="@color/pet_surface"
+                    app:boxStrokeColor="@color/pet_primary"
+                    app:boxStrokeWidth="1dp"
+                    app:boxStrokeWidthFocused="2dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/actFrequency"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:hint="Select frequency"
+                        android:inputType="none"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:textColor="@color/pet_text"
+                        android:textColorHint="@color/pet_text_secondary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- REPEAT -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="Repeat On"
+                    android:textColor="@color/pet_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cbSun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sun"
+                            android:textColor="@color/pet_text" />
+
+                        <CheckBox
+                            android:id="@+id/cbMon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mon"
+                            android:textColor="@color/pet_text" />
+
+                        <CheckBox
+                            android:id="@+id/cbTue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tue"
+                            android:textColor="@color/pet_text" />
+
+                        <CheckBox
+                            android:id="@+id/cbWed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wed"
+                            android:textColor="@color/pet_text" />
+
+                        <CheckBox
+                            android:id="@+id/cbThu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thu"
+                            android:textColor="@color/pet_text" />
+
+                        <CheckBox
+                            android:id="@+id/cbFri"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fri"
+                            android:textColor="@color/pet_text" />
+
+                        <CheckBox
+                            android:id="@+id/cbSat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sat"
+                            android:textColor="@color/pet_text" />
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+                <!-- SUPPLIES -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Supplies Needed"
+                    android:textColor="@color/pet_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutSupplies"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:boxBackgroundColor="@color/pet_surface"
+                    app:boxStrokeColor="@color/pet_primary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSupplies"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:hint="e.g. Dog food, leash, brush"
+                        android:inputType="textCapSentences"
+                        android:textColor="@color/pet_text"
+                        android:textColorHint="@color/pet_text_secondary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- INSTRUCTIONS -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Instructions"
+                    android:textColor="@color/pet_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutInstructions"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:boxBackgroundColor="@color/pet_surface"
+                    app:boxStrokeColor="@color/pet_primary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etInstructions"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="top|start"
+                        android:hint="e.g. Give one cup of dry food and fresh water"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:paddingTop="14dp"
+                        android:textColor="@color/pet_text"
+                        android:textColorHint="@color/pet_text_secondary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- NOTES -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Notes"
+                    android:textColor="@color/pet_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutNotes"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:boxBackgroundColor="@color/pet_surface"
+                    app:boxStrokeColor="@color/pet_primary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNotes"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:gravity="top|start"
+                        android:hint="Optional notes"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:paddingTop="14dp"
+                        android:textColor="@color/pet_text"
+                        android:textColorHint="@color/pet_text_secondary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- PHOTO -->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAddPhoto"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="18dp"
+                    android:text="+ ADD PHOTO (OPTIONAL)"
+                    android:textColor="@color/pet_primary"
+                    app:backgroundTint="@color/pet_surface"
+                    app:cornerRadius="14dp"
+                    app:strokeColor="@color/pet_primary" />
+
+
+                <!-- PROGRESS -->
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="14dp"
+                    android:indeterminateTint="@color/pet_primary"
+                    android:visibility="gone" />
+
+
+                <!-- SAVE -->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSaveRoutine"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="16dp"
+                    android:text="SAVE ROUTINE"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/pet_primary"
+                    app:cornerRadius="14dp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pet_background"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingStart="26dp"
+        android:paddingEnd="26dp"
+        android:paddingTop="26dp"
+        android:paddingBottom="30dp">
+
+
+        <!-- BACK -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBack"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="←"
+                android:textAllCaps="false"
+                android:textColor="@color/pet_text"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+
+        <!-- LOGO -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            app:cardBackgroundColor="#FFF0E7"
+            app:cardCornerRadius="41dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/pet_primary"
+            app:strokeWidth="1dp">
+
+            <ImageView
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_gravity="center"
+                android:contentDescription="PetCare logo"
+                android:src="@drawable/ic_pets_24"
+                app:tint="@color/pet_primary" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- BRAND -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="PetCare"
+            android:textColor="@color/pet_text"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="Create your account and start caring smarter."
+            android:textColor="@color/pet_text_secondary"
+            android:textSize="12sp" />
+
+
+        <!-- REGISTER CARD -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/pet_surface"
+            app:cardCornerRadius="26dp"
+            app:cardElevation="3dp"
+            app:strokeColor="#F2D6C8"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Create Account"
+                    android:textColor="@color/pet_text"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Sign up to manage your pets and daily care."
+                    android:textColor="@color/pet_text_secondary"
+                    android:textSize="12sp" />
+
+
+                <!-- FULL NAME -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="Full Name"
+                    app:boxBackgroundColor="@color/pet_surface"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopStart="16dp"
+                    app:boxCornerRadiusTopEnd="16dp"
+                    app:boxCornerRadiusBottomStart="16dp"
+                    app:boxCornerRadiusBottomEnd="16dp"
+                    app:boxStrokeColor="@color/pet_primary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etFullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName|textCapWords"
+                        android:textColor="@color/pet_text"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- EMAIL -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:hint="Email"
+                    app:boxBackgroundColor="@color/pet_surface"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopStart="16dp"
+                    app:boxCornerRadiusTopEnd="16dp"
+                    app:boxCornerRadiusBottomStart="16dp"
+                    app:boxCornerRadiusBottomEnd="16dp"
+                    app:boxStrokeColor="@color/pet_primary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/pet_text"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- PASSWORD -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:hint="Password"
+                    app:boxBackgroundColor="@color/pet_surface"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopStart="16dp"
+                    app:boxCornerRadiusTopEnd="16dp"
+                    app:boxCornerRadiusBottomStart="16dp"
+                    app:boxCornerRadiusBottomEnd="16dp"
+                    app:boxStrokeColor="@color/pet_primary"
+                    app:endIconMode="password_toggle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textColor="@color/pet_text"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:hint="Confirm Password"
+                    app:boxBackgroundColor="@color/pet_surface"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopStart="16dp"
+                    app:boxCornerRadiusTopEnd="16dp"
+                    app:boxCornerRadiusBottomStart="16dp"
+                    app:boxCornerRadiusBottomEnd="16dp"
+                    app:boxStrokeColor="@color/pet_primary"
+                    app:endIconMode="password_toggle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etConfirmPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textColor="@color/pet_text"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- PASSWORD GUIDE -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Use at least 6 characters."
+                    android:textColor="@color/pet_text_secondary"
+                    android:textSize="10sp" />
+
+
+                <!-- CREATE ACCOUNT -->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Create Account"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/pet_primary"
+                    app:cornerRadius="18dp" />
+
+
+                <!-- LOGIN LINK -->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGoLogin"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Already have an account? Log In"
+                    android:textAllCaps="false"
+                    android:textColor="@color/pet_primary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- FIREBASE NOTE -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:text="🔒 Your password is securely handled by Firebase"
+            android:textColor="@color/pet_text_secondary"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pet_background"
+    android:fitsSystemWindows="true">
+
+    <!-- ===================================================== -->
+    <!-- MAIN CONTENT -->
+    <!-- ===================================================== -->
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="22dp"
+            android:paddingBottom="28dp">
+
+
+            <!-- ================================================= -->
+            <!-- HEADER -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🐾 PetCare"
+                        android:textColor="@color/pet_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="Care Routines"
+                        android:textColor="@color/pet_text"
+                        android:textSize="27sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvRoutineHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Plan recurring care for every pet."
+                        android:textColor="@color/pet_text_secondary"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+
+                <!-- TOP ADD BUTTON -->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAddRoutineTop"
+                    android:layout_width="82dp"
+                    android:layout_height="48dp"
+                    android:text="+ Add"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/pet_primary"
+                    app:cornerRadius="17dp" />
+
+            </LinearLayout>
+
+
+            <!-- ================================================= -->
+            <!-- HERO INFORMATION CARD -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                app:cardBackgroundColor="#FFF0E7"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="18dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+                        app:cardBackgroundColor="@color/pet_surface"
+                        app:cardCornerRadius="29dp"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_routine_24"
+                            android:contentDescription="Care routine"
+                            app:tint="@color/pet_primary" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Healthy routines, happier pets"
+                            android:textColor="@color/pet_text"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Schedule feeding, exercise, grooming, medication and other care."
+                            android:textColor="@color/pet_text_secondary"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- ================================================= -->
+            <!-- SECTION TITLE -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Your Routines"
+                    android:textColor="@color/pet_text"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Manage schedule"
+                    android:textColor="@color/pet_primary"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!-- ================================================= -->
+            <!-- EMPTY STATE -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/emptyRoutineState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/pet_surface"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="30dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        app:cardBackgroundColor="#FFF0E7"
+                        app:cardCornerRadius="32dp"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_routine_24"
+                            android:contentDescription="No routine"
+                            app:tint="@color/pet_primary" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="No care routines yet"
+                        android:textColor="@color/pet_text"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center"
+                        android:text="Create your first routine for feeding, exercise, grooming or medication."
+                        android:textColor="@color/pet_text_secondary"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- ================================================= -->
+            <!-- DYNAMIC FIREBASE ROUTINES -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:id="@+id/routinesContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical" />
+
+
+            <!-- ================================================= -->
+            <!-- ADD ROUTINE -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddRoutineBottom"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp"
+                android:text="+ Create New Care Routine"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/pet_primary"
+                app:cornerRadius="18dp" />
+
+
+            <!-- ================================================= -->
+            <!-- CARE TIP -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                app:cardBackgroundColor="#FFF8E5"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="💡 Tip: Keep routine times and repeat days updated so today's checklist stays accurate."
+                    android:textColor="@color/pet_text_secondary"
+                    android:textSize="12sp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <!-- ===================================================== -->
+    <!-- BOTTOM NAVIGATION -->
+    <!-- ===================================================== -->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="74dp"
+        android:background="@color/pet_surface"
+        android:elevation="10dp"
+        app:itemIconSize="24dp"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

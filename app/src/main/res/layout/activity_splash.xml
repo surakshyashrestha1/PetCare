@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pet_background">
+
+    <!-- CENTER CONTENT -->
+
+    <LinearLayout
+        android:id="@+id/centerContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- LOGO -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="116dp"
+            android:layout_height="116dp"
+            app:cardBackgroundColor="@color/pet_surface"
+            app:cardCornerRadius="58dp"
+            app:cardElevation="6dp"
+            app:strokeColor="@color/pet_primary"
+            app:strokeWidth="2dp">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:contentDescription="PetCare logo"
+                android:src="@drawable/ic_pets_24"
+                app:tint="@color/pet_primary" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- APP NAME -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="PetCare"
+            android:textColor="@color/pet_text"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+
+        <!-- TAGLINE -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="Care made simple for every pet"
+            android:textColor="@color/pet_text_secondary"
+            android:textSize="15sp" />
+
+
+        <!-- LOADING -->
+
+        <ProgressBar
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="28dp"
+            android:indeterminateTint="@color/pet_primary" />
+
+    </LinearLayout>
+
+
+    <!-- BOTTOM TEXT -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="Your pet care companion"
+        android:textColor="@color/pet_text_secondary"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
